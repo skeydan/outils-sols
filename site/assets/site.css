@@ -1,0 +1,260 @@
+/* Shared styles for all tabs. Light and dark are both designed (not an
+   automatic flip). Palette: cyan (interaction, "your result"), green (brand,
+   links), subtle yellow (notes, "nearby"). Contrast ratios checked in both
+   themes; see README. */
+
+:root {
+  color-scheme: light;
+  --page: #f6f7f1;
+  --surface: #fdfdf9;
+  --surface-2: #f0f2ea;
+  --ink: #10201c;
+  --ink-2: #46544e;
+  --muted: #66716b;
+  --hairline: #dfe3da;
+  --border: rgba(16, 32, 28, 0.12);
+  --green: #1d7a4f;
+  --green-ink: #17643f;
+  --cyan: #0e98ad;
+  --cyan-strong: #087a8c;
+  --cyan-wash: #bfe3e6;
+  --yellow: #d9a400;
+  --yellow-wash: #f4e8bd;
+  --note: #fbf4d6;
+  --danger: #b4232f;
+  --focus: #087a8c;
+  --shadow: 0 1px 2px rgba(16, 32, 28, 0.06), 0 4px 16px rgba(16, 32, 28, 0.05);
+  --radius: 14px;
+  /* Fractions (categorical, validated all-pairs): sand ochre, silt slate blue, clay terracotta. */
+  --sand: #b8860b;
+  --silt: #5d7fc0;
+  --clay: #a33d26;
+  /* Texture groups, ordinal earthy ramp coarse -> fine (validated --ordinal),
+     with the label ink that reaches 4.5:1 on each step. */
+  --g1: #cfb070; --g2: #be975b; --g3: #ad7f48; --g4: #9c6737; --g5: #895028; --g6: #763a1c;
+  --on-g1: #10201c; --on-g2: #10201c; --on-g3: #10201c; --on-g4: #ffffff; --on-g5: #ffffff; --on-g6: #ffffff;
+  --mark: #0e98ad;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d1412;
+    --surface: #151d1b;
+    --surface-2: #1d2724;
+    --ink: #e9f1ec;
+    --ink-2: #b9c6bf;
+    --muted: #8d9993;
+    --hairline: #2a3532;
+    --border: rgba(255, 255, 255, 0.10);
+    --green: #5cc994;
+    --green-ink: #7fd8ab;
+    --cyan: #1a9fb3;
+    --cyan-strong: #4cc3d4;
+    --cyan-wash: #17494f;
+    --yellow: #b48d1f;
+    --yellow-wash: #4b431c;
+    --note: #2e2a17;
+    --danger: #ff8f8f;
+    --focus: #4cc3d4;
+    --sand: #bb8c16;
+    --silt: #6d8fd0;
+    --clay: #c24a33;
+    --g1: #624c23; --g2: #795c34; --g3: #916d46; --g4: #aa7e5a; --g5: #c3906f; --g6: #dca285;
+    --on-g1: #ffffff; --on-g2: #ffffff; --on-g3: #ffffff; --on-g4: #10201c; --on-g5: #10201c; --on-g6: #10201c;
+    --mark: #4cc3d4;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d1412;
+  --surface: #151d1b;
+  --surface-2: #1d2724;
+  --ink: #e9f1ec;
+  --ink-2: #b9c6bf;
+  --muted: #8d9993;
+  --hairline: #2a3532;
+  --border: rgba(255, 255, 255, 0.10);
+  --green: #5cc994;
+  --green-ink: #7fd8ab;
+  --cyan: #1a9fb3;
+  --cyan-strong: #4cc3d4;
+  --cyan-wash: #17494f;
+  --yellow: #b48d1f;
+  --yellow-wash: #4b431c;
+  --note: #2e2a17;
+  --danger: #ff8f8f;
+  --focus: #4cc3d4;
+  --sand: #bb8c16;
+  --silt: #6d8fd0;
+  --clay: #c24a33;
+  --g1: #624c23; --g2: #795c34; --g3: #916d46; --g4: #aa7e5a; --g5: #c3906f; --g6: #dca285;
+  --on-g1: #ffffff; --on-g2: #ffffff; --on-g3: #ffffff; --on-g4: #10201c; --on-g5: #10201c; --on-g6: #10201c;
+  --mark: #4cc3d4;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font: 16px/1.55 var(--font);
+  color: var(--ink);
+  background: var(--page);
+}
+a { color: var(--green-ink); text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 0.4em; }
+h1 { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.1rem); letter-spacing: -0.01em; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.05rem; }
+p { margin: 0 0 0.8em; }
+small, .small { font-size: 0.875rem; }
+.muted { color: var(--ink-2); }
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+/* Header */
+.site-header {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  max-width: 1180px; margin: 0 auto; padding: 14px 20px;
+}
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-weight: 650; color: var(--ink); text-decoration: none; margin-right: auto;
+}
+.brand svg { flex: none; }
+.header-tools { display: flex; gap: 8px; align-items: center; }
+.chip-btn, .seg button {
+  font: inherit; font-size: 0.875rem; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 999px; padding: 6px 12px; cursor: pointer; min-height: 36px;
+}
+.chip-btn:hover, .seg button:hover { background: var(--surface-2); }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; background: var(--surface); }
+.seg button { border: 0; border-radius: 0; }
+.seg button[aria-pressed="true"] { background: var(--cyan-wash); font-weight: 650; }
+
+/* Tab bar (one link per tab, built by app.js). The current tab sits on the strata band. */
+.tabs {
+  display: flex; gap: 4px; max-width: 1180px; margin: 0 auto; padding: 0 20px;
+  overflow-x: auto; scrollbar-width: none;
+}
+.tabs a {
+  padding: 8px 16px 9px; border: 1px solid transparent; border-bottom: 0; border-radius: 10px 10px 0 0;
+  color: var(--ink-2); font-weight: 600; text-decoration: none; white-space: nowrap;
+}
+.tabs a:hover { color: var(--ink); background: var(--surface-2); }
+.tabs a[aria-current="page"] { color: var(--ink); background: var(--surface); border-color: var(--border); box-shadow: inset 0 3px 0 var(--cyan); }
+.tab-panel[hidden], .section-panel[hidden] { display: none !important; }
+
+/* Sections inside a tab */
+.subnav { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
+.subnav a {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 7px 14px;
+  border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+  color: var(--ink); font-size: 0.92rem; text-decoration: none;
+}
+.subnav a:hover { background: var(--surface-2); }
+.subnav a[aria-current="page"] { background: var(--cyan-wash); border-color: var(--cyan); font-weight: 650; }
+.subnav svg { flex: none; color: var(--green-ink); }
+.subnav .short { display: none; }
+@media (max-width: 560px) {
+  .subnav { gap: 6px; margin: 10px 0 12px; }
+  .subnav .long { display: none; }
+  .subnav .short { display: inline; }
+  .tabs a { padding: 6px 12px 7px; }
+}
+
+main { max-width: 1180px; margin: 0 auto; padding: 4px 20px 48px; }
+.site-footer { max-width: 1180px; margin: 0 auto; padding: 24px 20px 40px; color: var(--ink-2); font-size: 0.875rem; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 18px;
+}
+.note {
+  background: var(--note); border-radius: 10px; padding: 10px 12px; font-size: 0.9rem;
+}
+
+/* A thin "soil profile" band under the header: clay, silt, sand. */
+.strata { height: 6px; background: linear-gradient(to bottom, var(--clay) 0 33%, var(--silt) 33% 66%, var(--sand) 66% 100%); }
+.strata { margin-bottom: 4px; }
+.chip { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: 0; }
+.chip.sand { background: var(--sand); } .chip.silt { background: var(--silt); } .chip.clay { background: var(--clay); }
+h1 { background: linear-gradient(90deg, var(--green-ink), var(--cyan-strong)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@media (forced-colors: active) { h1 { color: CanvasText; background: none; } }
+
+/* Calculator pages */
+.tool-cols { display: grid; gap: 18px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; margin-top: 14px; }
+.tool-cols .wide { grid-column: 1 / -1; }
+@media (max-width: 880px) { .tool-cols { grid-template-columns: minmax(0, 1fr); } }
+.fields { display: grid; gap: 10px 14px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.field label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink-2); margin-bottom: 3px; }
+.field-in { position: relative; display: flex; align-items: center; }
+.field-in input, .field-in select {
+  width: 100%; font: inherit; padding: 8px 10px; border-radius: 9px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--ink); min-height: 42px; font-variant-numeric: tabular-nums;
+}
+.field-in input[aria-invalid="true"] { border-color: var(--danger); box-shadow: 0 0 0 1px var(--danger); }
+.field-in .unit { position: absolute; right: 10px; color: var(--ink-2); font-size: 0.85rem; pointer-events: none; }
+.field-in input:has(+ .unit) { padding-right: 3.6em; }
+.hint { font-size: 0.8rem; color: var(--ink-2); margin: 3px 0 0; }
+.hero { font-size: clamp(2.2rem, 1.6rem + 2.4vw, 3.2rem); font-weight: 750; line-height: 1.05; margin: 2px 0; letter-spacing: -0.01em; }
+.hero small { font-size: 0.45em; font-weight: 600; color: var(--ink-2); margin-left: 4px; }
+.sub { color: var(--ink-2); margin: 0 0 8px; }
+.kv { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.kv th, .kv td { text-align: left; padding: 5px 4px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+.msg.error { color: var(--danger); }
+.err { color: var(--danger); font-size: 0.9rem; min-height: 1.2em; margin: 6px 0 0; }
+.facts { margin: 0; display: grid; gap: 10px; }
+.facts dt { font-weight: 650; font-size: 0.92rem; }
+.facts dd { margin: 2px 0 0; }
+.src { font-size: 0.78rem; vertical-align: super; line-height: 0; text-decoration: none; margin-left: 1px; }
+.sources ol { padding-left: 1.4em; margin: 0; display: grid; gap: 6px; font-size: 0.9rem; }
+.sources li { overflow-wrap: anywhere; }
+.sources li.is-target { background: var(--note); border-radius: 6px; }
+
+/* Jar test guide drawings (our own SVGs) */
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); counter-reset: st; }
+.steps li { display: grid; grid-template-columns: 76px 1fr; gap: 10px; align-items: start; counter-increment: st; }
+.steps h3::before { content: counter(st) ". "; color: var(--cyan-strong); }
+.steps p { font-size: 0.92rem; margin: 0; }
+.art svg { width: 100%; height: auto; display: block; }
+.d-glass { fill: none; stroke: var(--ink-2); stroke-width: 1.6; stroke-linecap: round; }
+.d-glass-fill { fill: var(--surface-2); stroke: var(--ink-2); stroke-width: 1.2; }
+.d-water { fill: var(--cyan-wash); opacity: 0.7; }
+.d-mud { fill: var(--g3); opacity: 0.55; }
+.d-soil { fill: var(--g3); }
+.d-sand { fill: var(--sand); } .d-silt { fill: var(--silt); } .d-clay { fill: var(--clay); }
+.d-stone { fill: var(--muted); }
+.d-root { fill: none; stroke: var(--g5); stroke-width: 1.6; stroke-linecap: round; }
+.d-x { stroke: var(--danger); stroke-width: 2; stroke-linecap: round; }
+.d-motion, .d-arrow { fill: none; stroke: var(--cyan-strong); stroke-width: 1.6; stroke-linecap: round; }
+.d-om { stroke: var(--g5); stroke-width: 2.4; stroke-dasharray: 3 2; }
+.d-ruler { fill: var(--yellow-wash); stroke: var(--ink-2); stroke-width: 0.8; }
+.d-tick { stroke: var(--ink-2); stroke-width: 0.8; }
+.d-lead { stroke: var(--ink-2); stroke-width: 0.8; }
+.d-lbl { font-size: 10px; fill: var(--ink); }
+figure.photo { margin: 14px 0 0; }
+figure.photo img { width: 100%; height: auto; border-radius: 10px; display: block; }
+figure.photo figcaption { font-size: 0.82rem; color: var(--ink-2); margin-top: 4px; }
+.photo-placeholder { margin-top: 12px; border: 2px dashed var(--border); border-radius: 10px; padding: 24px 12px; text-align: center; color: var(--ink-2); font-size: 0.9rem; }
+.art.settled { max-width: 460px; }
+figure.photo { max-width: 340px; }
+a.btn { display: inline-block; text-decoration: none; color: #fff; }
+:root[data-theme="dark"] a.btn { color: #0d1412; }
+@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) a.btn { color: #0d1412; } }
+.btn {
+  font: inherit; font-weight: 650; border-radius: 999px; padding: 8px 16px; cursor: pointer; min-height: 40px;
+  background: var(--green); color: #fff; border: 0;
+}
+:root[data-theme="dark"] .btn { color: #0d1412; }
+@media (prefers-color-scheme: dark) { :root:where(:not([data-theme="light"])) .btn { color: #0d1412; } }
+details.more { margin-top: 12px; border-top: 1px solid var(--hairline); padding-top: 10px; }
+details.more > summary { cursor: pointer; font-weight: 650; color: var(--green-ink); }

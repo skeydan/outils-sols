@@ -1,0 +1,187 @@
+// UI strings for the texture tool. Class names live in names.js, per-class
+// content in info/*.js. {placeholders} are filled by t().
+
+export const STR = {
+  'tx.subnav': { en: 'Soil texture', fr: 'Texture du sol' },
+  'tx.nav.triangle': { en: 'The texture triangle', fr: 'Le triangle des textures' },
+  'tx.nav.jar': { en: 'How to measure at home: the jar test', fr: 'La mesurer chez soi : le test du bocal' },
+  'tx.nav.triangle.short': { en: 'Triangle', fr: 'Triangle' },
+  'tx.nav.jar.short': { en: 'Jar test', fr: 'Test du bocal' },
+  'tx.title.triangle': { en: 'Soil texture triangle', fr: 'Triangle des textures du sol' },
+  'tx.title.jar': { en: 'The jar test', fr: 'Le test du bocal' },
+  title: { en: 'Soil texture triangle', fr: 'Triangle des textures du sol' },
+  // Our own HTML (a link to the jar section), applied with data-i18n-html.
+  lead: {
+    en: 'Enter how much sand, silt and clay your soil contains, or point at the triangle. You get its texture class, the classes close by, and what it means for water and for working the soil, with sources. No laboratory analysis? <a href="#texture/jar">Measure it at home with the jar test</a>.',
+    fr: 'Indiquez la part de sable, de limon et d’argile de votre sol, ou pointez directement dans le triangle. Vous obtenez sa classe de texture, les classes voisines, et ce que cela signifie pour l’eau et le travail du sol, avec les sources. Pas d’analyse de laboratoire ? <a href="#texture/jar">Mesurez-la chez vous avec le test du bocal</a>.',
+  },
+  sand: { en: 'Sand', fr: 'Sable' },
+  silt: { en: 'Silt', fr: 'Limon' },
+  clay: { en: 'Clay', fr: 'Argile' },
+  'sand.hyp': { en: 'sand = 100 − clay − silt', fr: 'sable = 100 − argile − limon' },
+
+  'sys.label': { en: 'Classification', fr: 'Classification' },
+  'sys.usda.short': { en: 'USDA', fr: 'USDA' },
+  'sys.uk.short': { en: 'UK (SSEW)', fr: 'R.-U. (SSEW)' },
+  'sys.geppa.short': { en: 'GEPPA (FR)', fr: 'GEPPA' },
+  'sys.aisne.short': { en: 'Aisne (FR)', fr: 'Aisne' },
+  'sys.usda.long': { en: 'USDA classification · sand above 50 µm', fr: 'Classification USDA · sables au-dessus de 50 µm' },
+  'sys.uk.long': { en: 'Soil Survey of England and Wales · sand above 60 µm', fr: 'Soil Survey of England and Wales · sables au-dessus de 60 µm' },
+  'sys.geppa.long': { en: 'GEPPA triangle (France) · sand above 50 µm', fr: 'Triangle du GEPPA (France) · sables au-dessus de 50 µm' },
+  'sys.aisne.long': { en: 'Aisne triangle (France) · sand above 50 µm', fr: 'Triangle de l’Aisne (France) · sables au-dessus de 50 µm' },
+  'sys.usda.note': {
+    en: '12 classes defined in the USDA Soil Survey Manual; FAO guides such as FAO-56 use them too.',
+    fr: '12 classes définies dans le Soil Survey Manual de l’USDA ; des guides de la FAO comme FAO-56 les reprennent.',
+  },
+  'sys.uk.note': {
+    en: '11 classes. The silt–sand limit is 60 µm, not 50 µm: ask your lab which limit it used.',
+    fr: '11 classes. La limite limon–sable est à 60 µm et non 50 µm : demandez à votre laboratoire quelle limite il a utilisée.',
+  },
+  'sys.geppa.note': {
+    en: 'The French triangle of the GEPPA (1963), 17 classes, drawn as a right-angled triangle.',
+    fr: 'Le triangle français du GEPPA (1963), 17 classes, dessiné en triangle rectangle.',
+  },
+  'sys.aisne.note': {
+    en: 'The French triangle of the Aisne soil survey (Jamagne 1967), 15 classes.',
+    fr: 'Le triangle de la carte des sols de l’Aisne (Jamagne 1967), 15 classes.',
+  },
+
+  'tri.title': { en: 'Texture triangle', fr: 'Triangle des textures' },
+  'tri.clickToSet': { en: 'Click to set', fr: 'Cliquez pour choisir' },
+  'tri.help': {
+    en: 'Click or drag in the triangle. On a phone, tap to place the point, or drag the dot. With the keyboard, focus the dot and use the arrow keys (Shift for steps of 5).',
+    fr: 'Cliquez ou glissez dans le triangle. Sur téléphone, touchez pour placer le point, ou faites glisser le point. Au clavier, placez le focus sur le point et utilisez les flèches (Maj pour des pas de 5).',
+  },
+  'legend.current': { en: 'Your class (thick outline)', fr: 'Votre classe (contour épais)' },
+  'legend.near': { en: 'Within {n} points (thin outline)', fr: 'À moins de {n} points (contour fin)' },
+  'legend.groups': { en: 'Texture groups, coarse to fine:', fr: 'Groupes de texture, du plus grossier au plus fin :' },
+  'jarin.summary': { en: 'From a jar test', fr: 'D’après un test du bocal' },
+  'jarin.help': {
+    en: 'Measure the thickness of each settled layer (same unit for all three, e.g. mm), from the top: clay, silt, sand. Each share is the layer thickness divided by the total thickness. It is a rough estimate: <a href="#texture/jar">how to do the test, and its limits</a>.',
+    fr: 'Mesurez l’épaisseur de chaque couche déposée (même unité pour les trois, par ex. en mm), de haut en bas : argile, limon, sable. Chaque part est l’épaisseur de la couche divisée par l’épaisseur totale. C’est une estimation grossière : <a href="#texture/jar">comment faire le test, et ses limites</a>.',
+  },
+  'jarin.clay': { en: 'Clay (top)', fr: 'Argile (en haut)' },
+  'jarin.silt': { en: 'Silt (middle)', fr: 'Limon (au milieu)' },
+  'jarin.sand': { en: 'Sand (bottom)', fr: 'Sable (au fond)' },
+  'jarin.go': { en: 'Use these layers', fr: 'Utiliser ces couches' },
+  'jarin.ok': { en: 'From the layers: sand {sand} %, silt {silt} %, clay {clay} % (of the settled thickness, not of the weight).', fr: 'D’après les couches : sable {sand} %, limon {silt} %, argile {clay} % (de l’épaisseur déposée, pas du poids).' },
+  'jarin.err.nan': { en: 'Enter three numbers (0 if a layer is missing).', fr: 'Saisissez trois nombres (0 si une couche manque).' },
+  'jarin.err.negative': { en: 'Thicknesses cannot be negative.', fr: 'Une épaisseur ne peut pas être négative.' },
+  'jarin.err.empty': { en: 'The total thickness is 0.', fr: 'L’épaisseur totale est nulle.' },
+  'legend.point': { en: 'Your sample', fr: 'Votre échantillon' },
+  'handle.label': {
+    en: 'Sample point: sand {sand} %, silt {silt} %, clay {clay} %, {cls}. Arrow keys move it.',
+    fr: 'Point de l’échantillon : sable {sand} %, limon {silt} %, argile {clay} %, {cls}. Les flèches le déplacent.',
+  },
+  announce: { en: 'Class: {name}', fr: 'Classe : {name}' },
+
+  'input.title': { en: 'Your sample', fr: 'Votre échantillon' },
+  rule: {
+    en: 'Rule: {calc} is calculated. You set {a} and {b} (type or slide); {calc} is always what is left to reach 100 %. Pick “Calculate this one” on another line to change.',
+  },
+  'rule.fr.sand': { fr: 'Règle : le sable est calculé. Vous réglez le limon et l’argile (saisie ou curseur) ; le sable prend toujours ce qui reste pour faire 100 %. « Calculer celle-ci » sur une autre ligne pour changer.' },
+  'rule.fr.silt': { fr: 'Règle : le limon est calculé. Vous réglez le sable et l’argile (saisie ou curseur) ; le limon prend toujours ce qui reste pour faire 100 %. « Calculer celle-ci » sur une autre ligne pour changer.' },
+  'rule.fr.clay': { fr: 'Règle : l’argile est calculée. Vous réglez le sable et le limon (saisie ou curseur) ; l’argile prend toujours ce qui reste pour faire 100 %. « Calculer celle-ci » sur une autre ligne pour changer.' },
+  'range.label': { en: '{f}, percent', fr: '{f}, en pourcentage' },
+  'range.labelCalc': { en: '{f}, percent (calculated)', fr: '{f}, en pourcentage (calculé)' },
+  'calc.is': { en: 'Calculated', fr: 'Calculé' },
+  'calc.make': { en: 'Calculate this one', fr: 'Calculer celle-ci' },
+  'calc.isLabel': { en: '{f} is the calculated fraction', fr: '{f} est la fraction calculée' },
+  'calc.makeLabel': { en: 'Make {f} the calculated fraction', fr: 'Faire de {f} la fraction calculée' },
+  'err.sum': {
+    en: 'Too much: {f} + {o} would be {over} points over 100. Lower one of them.',
+    fr: 'Trop : {f} + {o} dépasserait 100 de {over} points. Baissez l’un des deux.',
+  },
+  'err.range': { en: 'Enter a value between 0 and 100.', fr: 'Saisissez une valeur entre 0 et 100.' },
+  'err.nan': { en: 'That is not a number.', fr: 'Ce n’est pas un nombre.' },
+
+  'paste.summary': { en: 'Paste a lab result', fr: 'Coller un résultat de laboratoire' },
+  'paste.help': {
+    en: 'Paste the particle-size lines of your report, in French or English: % or g/kg, the 3 fractions or the 5 French fractions, even with sand and clay only. USDA sand grades are picked up too.',
+    fr: 'Collez les lignes de granulométrie de votre rapport, en français ou en anglais : en % ou g/kg, 3 fractions ou les 5 fractions françaises, même avec seulement sable et argile. Les sables USDA détaillés sont aussi repris.',
+  },
+  'paste.placeholder': { en: 'e.g. Sand 38 %  Silt 41 %  Clay 21 %', fr: 'ex. Argile 215 g/kg  Limons fins 310  Limons grossiers 205  Sables fins 150  Sables grossiers 120' },
+  'paste.go': { en: 'Read the values', fr: 'Lire les valeurs' },
+  'paste.example': { en: 'Try an example', fr: 'Essayer un exemple' },
+  'paste.exampleText': {
+    en: 'Particle size (pipette)\nClay 18.2 %\nSilt 36.9 %\nSand 44.0 %\nOrganic matter 3.1 %',
+    fr: 'Granulométrie 5 fractions sans décarbonatation\nArgile (< 2 µm) : 215 g/kg\nLimons fins (2/20 µm) : 310 g/kg\nLimons grossiers (20/50 µm) : 205 g/kg\nSables fins (50/200 µm) : 150 g/kg\nSables grossiers (200/2000 µm) : 120 g/kg\nMatière organique : 23 g/kg',
+  },
+  'paste.ok': { en: 'Read: sand {sand} %, silt {silt} %, clay {clay} %.', fr: 'Lu : sable {sand} %, limon {silt} %, argile {clay} %.' },
+  'paste.note.gkg': { en: 'Values in g/kg, divided by 10.', fr: 'Valeurs en g/kg, divisées par 10.' },
+  'paste.note.rescaled': {
+    en: 'Your values added up to {sum}; they were rescaled to 100 keeping their proportions.',
+    fr: 'Vos valeurs faisaient {sum} au total ; elles ont été ramenées à 100 en gardant leurs proportions.',
+  },
+  'paste.note.far-from-100': {
+    en: 'That is far from 100: check that gravel or organic matter are not included.',
+    fr: 'C’est loin de 100 : vérifiez que les graviers ou la matière organique ne sont pas comptés.',
+  },
+  'paste.note.computed-third': { en: 'One fraction was missing; it is what is left to reach 100.', fr: 'Une fraction manquait ; c’est ce qui reste pour faire 100.' },
+  'paste.note.assumed-order': {
+    en: 'No labels found: read as sand, silt, clay in that order.',
+    fr: 'Pas d’étiquettes : lu dans l’ordre sable, limon, argile.',
+  },
+  'paste.note.summed-fr-fractions': {
+    en: 'Fine and coarse fractions were added up (silt 2–50 µm, sand 50–2000 µm).',
+    fr: 'Fractions fines et grossières additionnées (limons 2–50 µm, sables 50–2000 µm).',
+  },
+  'paste.note.summed-silt': { en: 'Fine and coarse silt were added up.', fr: 'Limons fins et grossiers additionnés.' },
+  'paste.note.grades-of-sand': { en: 'Sand grades read as % of the sand.', fr: 'Sables détaillés lus en % du sable.' },
+  'paste.note.grades-mismatch': {
+    en: 'Sand grades ignored: they add up neither to the sand nor to 100.',
+    fr: 'Sables détaillés ignorés : leur somme ne fait ni le sable total ni 100.',
+  },
+  'paste.note.om': { en: 'Organic matter {om} % noted; it is not part of texture.', fr: 'Matière organique {om} % relevée ; elle ne fait pas partie de la texture.' },
+  'paste.err.nothing-found': { en: 'No numbers found.', fr: 'Aucun nombre trouvé.' },
+  'paste.err.need-labels': {
+    en: 'Please keep the labels (sand, silt, clay…) so the numbers can be told apart.',
+    fr: 'Gardez les étiquettes (sable, limon, argile…) pour que les nombres soient reconnus.',
+  },
+  'paste.err.missing': { en: 'Missing: {missing}. At least two of the three fractions are needed.', fr: 'Manquant : {missing}. Il faut au moins deux des trois fractions.' },
+  'paste.err.two-over-100': { en: 'The two fractions found add up to more than 100.', fr: 'Les deux fractions trouvées dépassent 100 à elles deux.' },
+  'paste.err.negative': { en: 'Negative values are not possible.', fr: 'Les valeurs négatives sont impossibles.' },
+
+  'grades.summary': { en: 'Sand grades (optional, USDA subclasses)', fr: 'Sables détaillés (facultatif, sous-classes USDA)' },
+  'grades.help': {
+    en: 'For sands, loamy sands and sandy loams, the USDA names a subclass (coarse, fine, very fine…) from the sand grades. Enter them in % of the whole sample (they add up to the sand), or in % of the sand (they add up to 100).',
+    fr: 'Pour les sables, sables loameux et loams sableux, l’USDA nomme une sous-classe (grossier, fin, très fin…) d’après le détail des sables. Saisissez-les en % de l’échantillon (leur somme = le sable) ou en % du sable (leur somme = 100).',
+  },
+  'grade.vcs': { en: 'Very coarse 1–2 mm', fr: 'Très grossier 1–2 mm' },
+  'grade.cs': { en: 'Coarse 0.5–1 mm', fr: 'Grossier 0,5–1 mm' },
+  'grade.ms': { en: 'Medium 0.25–0.5 mm', fr: 'Moyen 0,25–0,5 mm' },
+  'grade.fs': { en: 'Fine 0.10–0.25 mm', fr: 'Fin 0,10–0,25 mm' },
+  'grade.vfs': { en: 'Very fine 0.05–0.10 mm', fr: 'Très fin 0,05–0,10 mm' },
+  'grades.ofSand': { en: 'Read as % of the sand.', fr: 'Lu en % du sable.' },
+  'grades.mismatch': {
+    en: 'These add up to {sum}: that is neither the sand ({sand} %) nor 100.',
+    fr: 'Leur somme fait {sum} : ce n’est ni le sable ({sand} %) ni 100.',
+  },
+
+  'result.subclass': { en: 'Subclass: {name}', fr: 'Sous-classe : {name}' },
+  'near.none': { en: 'No other class within {n} points: the class is clear-cut.', fr: 'Aucune autre classe à moins de {n} points : la classe est nette.' },
+  'near.title': { en: 'Close to another class (within {n} points):', fr: 'Proche d’une autre classe (à moins de {n} points) :' },
+  'near.onLine': { en: 'Exactly on a class limit:', fr: 'Exactement sur une limite de classe :' },
+  'near.item': { en: '{name}: {d} points away ({how})', fr: '{name} : à {d} points ({how})' },
+  'near.boundaryRule': {
+    en: '{name}: on the line. The written definition puts this point in {cur}.',
+    fr: '{name} : sur la ligne. La définition écrite place ce point en {cur}.',
+  },
+  'near.boundaryFig': {
+    en: '{name}: on the line. This triangle is only published as a figure, so either class can be argued.',
+    fr: '{name} : sur la ligne. Ce triangle n’est publié que sous forme de figure : les deux classes se défendent.',
+  },
+
+  'table.class': { en: 'Class', fr: 'Classe' },
+  'table.abbr': { en: 'Code', fr: 'Code' },
+  'table.limits': { en: 'Limits', fr: 'Limites' },
+  'table.dist': { en: 'Distance (points)', fr: 'Distance (points)' },
+  'table.here': { en: 'here', fr: 'ici' },
+  'table.sample': { en: 'Your sample: sand {sand} %, silt {silt} %, clay {clay} %. Distances are shown for classes within 3 points.', fr: 'Votre échantillon : sable {sand} %, limon {silt} %, argile {clay} %. Distances indiquées pour les classes à moins de 3 points.' },
+  'sources.note': {
+    en: 'Texts on this page are our own summaries of these documents; numbers are copied from them, with unit conversions only. Class limits of figure-only triangles are digitised and may be off by a fraction of a point. The drawings are our own.',
+    fr: 'Les textes de cette page résument ces documents avec nos mots ; les nombres en sont repris, avec seulement des conversions d’unités. Les limites des triangles publiés seulement en figure sont numérisées et peuvent s’écarter d’une fraction de point. Les dessins sont les nôtres.',
+  },
+  'link.jar': { en: 'Measure your texture with a jar →', fr: 'Mesurer sa texture avec un bocal →' },
+  'table.summary': { en: 'The triangle as a table', fr: 'Le triangle sous forme de tableau' },
+};
