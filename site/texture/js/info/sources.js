@@ -136,7 +136,7 @@ export const SOURCES = [
   },
   {
     id: 'photo',
-    text: 'Photo: Chaojoker, “Հողի թեստ” (soil test), Wikimedia Commons, 2012, licence CC BY-SA 3.0; resized for this page.',
+    text: 'Photo: Chaojoker, “Հողի թեստ” (soil test), Wikimedia Commons, 2012, licence CC BY-SA 3.0; modified: resized for this page; shared under CC BY-SA 3.0.',
     url: 'https://commons.wikimedia.org/wiki/File:%D5%80%D5%B8%D5%B2%D5%AB_%D5%A9%D5%A5%D5%BD%D5%BF.JPG',
   },
 ];
