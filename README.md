@@ -190,5 +190,3 @@ Code: MIT, see [LICENSE](LICENSE). Text, data tables and our own drawings:
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), unless
 stated otherwise. Third-party images keep their own licence as credited.
 The one photograph (soil jar test, by Chaojoker, Wikimedia Commons, CC BY-SA 3.0) keeps its own licence; our resized version is shared under CC BY-SA 3.0, as credited where it is shown.
-
-Built with the help of AI coding tools; every fact is checked against the cited sources.
